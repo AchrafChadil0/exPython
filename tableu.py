@@ -5,12 +5,12 @@
 n = int(input("Donner le nombre de cas :"))
 t = [None] * n
 for i in range(0, n):
-    t[i]  = int(input("Donner un entier :"))
+    t[i]  = input("Entrez une valeur :")
 positif = 0
 negative = 0
 
 for i in range(0, n):
-    if t[i] >= 0:
+    if float(t[i]) >= 0:
         positif +=1
     else:
         negative += 1
@@ -28,12 +28,12 @@ print("le  nombre de valeur negatif :", negative)
 n = int(input("Donner le nombre de cas :"))
 t = [None] * n
 for i in range(0, n):
-    t[i]  = int(input("Donner un entier :"))
+    t[i]  = float(input("Entrez une valeur :"))
 pair = 0
 impair = 0
 
 for i in range(0, n):
-    if t[i] % 2 == 0:
+    if int(t[i]) % 2 == 0:
         pair +=1
     else:
         impair += 1
@@ -51,14 +51,14 @@ print("le nombre de valuer impair :", impair)
 n = int(input("Donner le nombre de cas :"))
 t = [None] * n
 for i in range(0, n):
-    t[i]  = int(input("Donner un entier :"))
+    t[i]  = float(input("Entrez une valeur :"))
 
 for i in range(0, n):
     if t[i] < 0:
         t[i] = -t[i]
 
 
-#print(t)        
+print(*t)        
 
 '''
 
@@ -70,7 +70,7 @@ n = int(input("Donner le nombre de cas :"))
 t = [None] * n
 somme = 0
 for i in range(0, n):
-    t[i]  = int(input("Donner un entier :"))
+    t[i]  = float(input("Entrez une valeur :"))
     somme += t[i]
 
 supp = 0
@@ -87,8 +87,8 @@ print("La valeur moyenne", moyenne)
 print("Le nombre de valeur suppérior à la valeur moyenne", supp)
 print("Le nombre de valeur inférior à la valeur moyenne", infr)            
 
-'''
 
+'''
 
 #----------------- Serie 1 ex 05 --------------------
 
@@ -97,7 +97,7 @@ print("Le nombre de valeur inférior à la valeur moyenne", infr)
 n = int(input("Donner le nombre de cas :"))
 t = [None] * n
 for i in range(0, n):
-    t[i]  = int(input("Donner un entier :"))
+    t[i]  = float(input("Entrez une valeur :"))
 
 maxv = max(t)
 minv = min(t)
@@ -105,17 +105,17 @@ minv = min(t)
 print("La valeur maximale :", maxv)
 print("la valeur minimale :", minv)  
 
-
 '''
+
 
 #----------------- Serie 1 ex 07 --------------------
 
-
 '''
+
 n = int(input("Donner le nombre de cas :"))
 t = [None] * n
 for i in range(0, n):
-    t[i]  = int(input("Donner un entier :"))
+    t[i]  = input("Entrez une valeur :")
 
 #l.sort()
 
@@ -124,17 +124,17 @@ while sorted(t) != t:
         if t[i] > t[i+1]:
             t[i] , t[i+1] = t[i+1] , t[i]
 
-#print(t)
-
+print("le tableau ordonné :",*t)
 
 '''
+
 #----------------- Serie 1 ex 08 --------------------
-'''
 
+'''
 n = int(input("Donner le nombre de cas :"))
 t = [None] * n
 for i in range(0, n):
-    t[i]  = int(input("Donner un entier :"))
+    t[i]  = input("Entrez une valeur :")
 index = n
 for i in range(0, n//2):
     index -= 1
@@ -142,17 +142,17 @@ for i in range(0, n//2):
         
         t[i] , t[index] = t[index] , t[i]
 
-print("Son inverse :", t)
-
+print("Son inverse :", *t)
 
 '''
+
 
 
 #----------------- Serie 1 ex 09 --------------------
 
-'''
 
-n = int(input("Donner un entier :"))
+'''
+n = int(input("Entrez une valeur :"))
 temp = n
 t = []
 
@@ -161,6 +161,25 @@ while n != 0:
     t.append(w)
     n //= 2
 
+    
+
+t.reverse()
 print(f"la base binaire de {temp} est :", ''.join(str(i) for i in t))    
+
+'''
+
+#----------------- Serie 1 ex 10 --------------------
+
+'''
+
+n = int(input("Donner le nombre de cas :"))
+t = [None] * n
+for i in range(0, n):
+    t[i]  = input("Donner une valeur :")
+
+x, position = input("entrer une valeur à ajouter") , int(input("et sa position sur le tableau")) 
+
+t.insert(position, x)
+print(*t)
 
 '''
