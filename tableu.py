@@ -110,6 +110,23 @@ print("la valeur minimale :", minv)
 
 #----------------- Serie 1 ex 07 --------------------
 
+n = int(input("Donner le nombre de cas :"))
+t = [None] * n
+for i in range(0, n):
+    t[i]  = int(input("Donner un entier :"))
+
+#l.sort()
+
+while sorted(t) != t:
+    for i in range(0, n-1):
+        if t[i] > t[i+1]:
+            t[i] , t[i+1] = t[i+1] , t[i]
+
+#print(t)
+
+#----------------- Serie 1 ex 08 --------------------
+
+
 
 
 
