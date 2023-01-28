@@ -110,6 +110,8 @@ print("la valeur minimale :", minv)
 
 #----------------- Serie 1 ex 07 --------------------
 
+
+'''
 n = int(input("Donner le nombre de cas :"))
 t = [None] * n
 for i in range(0, n):
@@ -124,9 +126,41 @@ while sorted(t) != t:
 
 #print(t)
 
+
+'''
 #----------------- Serie 1 ex 08 --------------------
+'''
+
+n = int(input("Donner le nombre de cas :"))
+t = [None] * n
+for i in range(0, n):
+    t[i]  = int(input("Donner un entier :"))
+index = n
+for i in range(0, n//2):
+    index -= 1
+    if t[i] != t[index]:
+        
+        t[i] , t[index] = t[index] , t[i]
+
+print("Son inverse :", t)
 
 
+'''
 
 
+#----------------- Serie 1 ex 09 --------------------
 
+'''
+
+n = int(input("Donner un entier :"))
+temp = n
+t = []
+
+while n != 0:
+    w = n % 2
+    t.append(w)
+    n //= 2
+
+print(f"la base binaire de {temp} est :", ''.join(str(i) for i in t))    
+
+'''
