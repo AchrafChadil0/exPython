@@ -185,3 +185,52 @@ print(*t)
 '''
 
 #----------------- Serie 1 ex 11 --------------------
+'''
+
+n = int(input("Donner le nombre de cas :"))
+t = [None] * n
+for i in range(0, n):
+    t[i]  = input("Donner une valeur :")
+
+position = int(input("saisissez la position dans le tableau que vous voulez supprimer :")) 
+
+t.remove(t[position-1])
+
+print(*t)
+
+
+'''
+
+
+#----------------- Serie 1 ex 12 --------------------
+'''
+
+n = int(input("Donner le nombre de cas :"))
+t = [None] * n
+for i in range(0, n):
+    t[i]  = input("Donner une valeur :")
+
+x = input("entrez une valeur que vous voulez supprimer  :")
+
+for i in range(0, n):
+    if float(t[i]) == float(x): 
+        t.remove(t[i])
+
+
+'''
+
+
+#----------------- Serie 1 ex 13 --------------------
+'''
+
+n = int(input("Donner le nombre de cas :"))
+t = [None] * n
+for i in range(0, n):
+    t[i]  = input("Donner une valeur :")
+
+t = set(t)
+
+print(t)
+
+
+'''
