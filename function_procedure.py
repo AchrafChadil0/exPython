@@ -72,4 +72,12 @@ def occurrence(t, x):
 
 '''
 #----------------- Serie 1 ex 07 --------------------*
+'''
 
+def premierP(t, x):
+    for i in range(0, len(t)):
+        if t[i] == x:
+            return i+1
+            
+
+'''
