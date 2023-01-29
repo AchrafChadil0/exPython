@@ -111,7 +111,79 @@ print("La valeur moyenne", moy)
 
 #----------------- Serie 2 ex 08 --------------------
 
+'''
+
 n = int(input("Donner un entier : "))
 maxv = n
 minv = n
+s = n
 
+for i in range(0, 19):
+    n = int(input("tapez un entier :"))
+    s = s + n
+    if n > maxv:
+        maxv = n
+    elif n < minv:
+        minv = n
+    
+s = s / 20
+
+print("la valeur moyenne est :", s)
+print("la valeur maximale est : ", maxv)
+print("La valeur minimale est :", minv )
+
+
+'''
+
+#----------------- Serie 1 ex 01 --------------------
+'''
+
+n = int(input("tapez un entier :"))
+s = 0
+for i in range(1, n+1):
+    s = s + i
+
+print("La somme est", s)
+
+'''
+
+#----------------- Serie 1 ex 02 --------------------
+'''
+
+
+n = int(input("tapez un entier :"))
+m = 1
+for i in range(1, n+1):
+    m = m * i
+
+print("la multiplication est :", m)
+
+'''
+
+#----------------- Serie 1 ex 03 --------------------
+
+'''
+
+n = int(input("tapez un entier :"))
+s = 0
+p = 1
+
+for i in range(1, n+1):
+    p = p * i
+    s = s + p
+
+print("La somme est :", s)    
+
+'''
+
+#----------------- Serie 1 ex 04 --------------------
+'''
+
+n = int(input("tapez un entier :"))
+p = 1
+for i in range(1, n+1):
+    p = p * n
+
+print(f"{n} puissence {n} = ", p)
+
+'''
